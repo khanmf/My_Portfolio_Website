@@ -76,6 +76,7 @@ const Navigation = ({ darkMode, toggleDarkMode }) => {
               className={`rounded-full ${
                 darkMode ? 'hover:bg-slate-700' : 'hover:bg-gray-100'
               }`}
+              aria-label="Toggle dark mode"
             >
               {darkMode ? (
                 <Sun className="h-5 w-5 text-yellow-500" />
