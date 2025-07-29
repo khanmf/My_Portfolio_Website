@@ -294,12 +294,12 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Contact Form POST API Endpoint"
-    - "Contact Form GET All Submissions API"
-    - "Contact Form Required Field Validation"
-    - "Contact Form Email Format Validation"
+    - "Contact Form UI and Validation"
+    - "Contact Form Submission and Success Feedback"
+    - "Site Navigation and Dark/Light Mode Toggle"
+    - "Hero Section Elements and Social Links"
   stuck_tasks: []
-  test_all: false
+  test_all: true
   test_priority: "high_first"
 
 agent_communication:
