@@ -103,7 +103,7 @@ const AboutPage = ({ darkMode }) => {
           {/* About Photo */}
           <div>
             <div 
-              className="w-full rounded-2xl overflow-hidden shadow-lg"
+              className="w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
               style={{ 
                 width: '100%', 
                 borderRadius: '16px', 
@@ -113,8 +113,8 @@ const AboutPage = ({ darkMode }) => {
               <img 
                 src="/assets/images/aboutme_section_photo.png" 
                 alt="Dr. Mohemmed Faraz Khan - About Me"
-                className="w-full h-full object-cover object-center"
-                style={{ height: '520px' }}
+                className="w-full h-full object-cover object-center transition-transform duration-300"
+                style={{ height: '600px' }}
               />
             </div>
           </div>
