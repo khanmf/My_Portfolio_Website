@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, Mail, Linkedin, Github } from 'lucide-react';
+import { ArrowRight, Download, Mail, Linkedin } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Hero = ({ darkMode }) => {
