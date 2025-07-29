@@ -3,9 +3,9 @@ import React from 'react';
 const WelcomeSection = ({ darkMode }) => {
   return (
     <section 
-      className="py-16 px-8"
+      className={`py-16 px-8 ${darkMode ? 'bg-slate-800' : 'bg-gray-50'}`}
       style={{ 
-        backgroundColor: '#F8F9FA',
+        backgroundColor: darkMode ? '#1e293b' : '#F8F9FA',
         padding: '4rem 2rem'
       }}
     >
