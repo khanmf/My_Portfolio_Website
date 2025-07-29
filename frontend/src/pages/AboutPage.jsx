@@ -114,7 +114,7 @@ const AboutPage = ({ darkMode }) => {
                 src="/assets/images/aboutme_section_photo.png" 
                 alt="Dr. Mohemmed Faraz Khan - About Me"
                 className="w-full h-full object-cover object-center"
-                style={{ height: '450px' }}
+                style={{ height: '520px' }}
               />
             </div>
           </div>
