@@ -110,16 +110,11 @@ const AboutPage = ({ darkMode }) => {
                 boxShadow: '0 4px 16px rgba(0,0,0,0.1)' 
               }}
             >
-              {/* Placeholder for aboutme_section_photo.png */}
-              <div className={`w-full h-96 flex items-center justify-center ${
-                darkMode ? 'bg-slate-700 text-gray-500' : 'bg-gray-200 text-gray-400'
-              }`}>
-                <div className="text-center">
-                  <div className="text-6xl mb-2">👨‍🔬</div>
-                  <div className="text-sm">About Me Section Photo</div>
-                  <div className="text-xs mt-1">aboutme_section_photo.png</div>
-                </div>
-              </div>
+              <img 
+                src="/assets/images/aboutme_section_photo.png" 
+                alt="Dr. Mohemmed Faraz Khan - About Me"
+                className="w-full h-96 object-cover object-center"
+              />
             </div>
           </div>
         </section>
