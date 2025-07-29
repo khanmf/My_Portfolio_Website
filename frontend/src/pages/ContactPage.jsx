@@ -25,6 +25,7 @@ const API = `${BACKEND_URL}/api`;
 
 const ContactPage = ({ darkMode }) => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,25 +36,53 @@ const ContactPage = ({ darkMode }) => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Mock form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. I'll get back to you within 24 hours.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      projectType: '',
-      budget: '',
-      timeline: '',
-      message: ''
-    });
+    try {
+      // Prepare data for backend
+      const submitData = {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        project_type: formData.projectType || null,
+        budget: formData.budget || null,
+        timeline: formData.timeline || null,
+        message: formData.message
+      };
+
+      // Submit to backend
+      const response = await axios.post(`${API}/contact`, submitData);
+      
+      if (response.data) {
+        toast({
+          title: "Message Sent Successfully! 🎉",
+          description: "Thank you for your inquiry. I'll get back to you within 24 hours.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          projectType: '',
+          budget: '',
+          timeline: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      
+      toast({
+        title: "Submission Failed ❌",
+        description: "There was an error sending your message. Please try again or contact directly via email.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
