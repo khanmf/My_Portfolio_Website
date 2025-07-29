@@ -331,10 +331,20 @@ const ContactPage = ({ darkMode }) => {
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white disabled:opacity-50"
+                  disabled={isSubmitting}
                 >
-                  <Send className="mr-2 h-4 w-4" />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending Message...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </Card>
