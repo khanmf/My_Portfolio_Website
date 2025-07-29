@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import WelcomeSection from '../components/WelcomeSection';
 import { Card } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { ArrowRight, BookOpen, Briefcase, Award, Users } from 'lucide-react';
@@ -41,6 +42,9 @@ const HomePage = ({ darkMode }) => {
     <div className={`min-h-screen ${darkMode ? 'bg-slate-900' : 'bg-gray-50'}`}>
       {/* Hero Section */}
       <Hero darkMode={darkMode} />
+
+      {/* Welcome Section */}
+      <WelcomeSection darkMode={darkMode} />
 
       {/* Highlights Section */}
       <section className={`py-20 ${darkMode ? 'bg-slate-800' : 'bg-white'}`}>

@@ -63,58 +63,70 @@ const AboutPage = ({ darkMode }) => {
           </p>
         </div>
 
+        {/* Main About Section - Following Block 2 Specifications */}
+        <section 
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 p-8 rounded-2xl ${
+            darkMode ? 'bg-slate-800' : 'bg-white'
+          }`}
+          style={{ 
+            display: 'grid', 
+            gridTemplateColumns: '1fr 1fr', 
+            gap: '2rem', 
+            padding: '4rem 2rem',
+            backgroundColor: darkMode ? '#1e293b' : 'white'
+          }}
+        >
+          {/* About Text */}
+          <div style={{ fontFamily: "'Inter', sans-serif" }}>
+            <h2 
+              className={`mb-6 ${darkMode ? 'text-white' : 'text-slate-800'}`}
+              style={{ 
+                fontFamily: "'Playfair Display', serif", 
+                fontSize: '2rem' 
+              }}
+            >
+              About Me
+            </h2>
+            <div 
+              className={`${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
+              style={{ lineHeight: '1.75' }}
+            >
+              <p className="mb-4">
+                I'm Dr. Mohemmed Faraz Khan — a pharmaceutical chemist and computational drug discovery expert with over a decade of academic and research experience, including postdoctoral roles at Trinity College Dublin and Maynooth University, Ireland. My work spans molecular docking, pharmacophore modeling, virtual screening, and AI/ML applications in drug discovery. With 40+ peer-reviewed publications and an h-index of 18, I've mentored students, led research projects, and developed automation tools like <em>DataPype</em> for virtual screening pipelines.
+              </p>
+              <p>
+                Now working independently as a scientific consultant and freelance researcher, I offer high-quality services in computational chemistry, scientific content development, proposal writing, academic editing, and CADD consulting. I bring deep domain expertise, fast turnaround, and precision to every project — whether it's a grant draft, a complex modeling task, or a publication-ready manuscript. This site reflects both my academic foundation and the innovative freelance work I do today.
+              </p>
+            </div>
+          </div>
+
+          {/* About Photo */}
+          <div>
+            <div 
+              className="w-full rounded-2xl overflow-hidden shadow-lg"
+              style={{ 
+                width: '100%', 
+                borderRadius: '16px', 
+                boxShadow: '0 4px 16px rgba(0,0,0,0.1)' 
+              }}
+            >
+              {/* Placeholder for aboutme_section_photo.png */}
+              <div className={`w-full h-96 flex items-center justify-center ${
+                darkMode ? 'bg-slate-700 text-gray-500' : 'bg-gray-200 text-gray-400'
+              }`}>
+                <div className="text-center">
+                  <div className="text-6xl mb-2">👨‍🔬</div>
+                  <div className="text-sm">About Me Section Photo</div>
+                  <div className="text-xs mt-1">aboutme_section_photo.png</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
-            {/* About Section with Photo Placeholder */}
-            <Card className={`p-8 ${
-              darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
-            }`}>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="md:col-span-1">
-                  <div className={`w-full aspect-square rounded-xl overflow-hidden ${
-                    darkMode ? 'bg-slate-700' : 'bg-gray-200'
-                  }`}>
-                    {/* Placeholder for aboutme_section_photo.png */}
-                    <div className={`w-full h-full flex items-center justify-center ${
-                      darkMode ? 'text-gray-500' : 'text-gray-400'
-                    }`}>
-                      <div className="text-center">
-                        <div className="text-4xl mb-2">👨‍🔬</div>
-                        <div className="text-sm">About Me Photo</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="md:col-span-2">
-                  <h2 className={`text-2xl font-serif font-bold mb-4 ${
-                    darkMode ? 'text-white' : 'text-slate-800'
-                  }`}>
-                    Professional Journey
-                  </h2>
-                  <div className={`space-y-4 text-sm leading-relaxed ${
-                    darkMode ? 'text-gray-300' : 'text-gray-600'
-                  }`}>
-                    <p>
-                      With over a decade of experience in computational chemistry and pharmaceutical research, 
-                      I have dedicated my career to advancing drug discovery through cutting-edge AI/ML technologies 
-                      and innovative computational approaches.
-                    </p>
-                    <p>
-                      My academic journey has taken me from New Delhi to Dublin and beyond, working with 
-                      leading research institutions and developing platforms that bridge the gap between 
-                      theoretical research and practical drug development solutions.
-                    </p>
-                    <p>
-                      As an independent freelancer, I leverage this extensive academic background to provide 
-                      high-quality scientific writing, research consulting, and technical services to clients 
-                      worldwide, helping them navigate the complex landscape of modern pharmaceutical research.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
             {/* Research Philosophy */}
             <Card className={`p-6 ${
               darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
