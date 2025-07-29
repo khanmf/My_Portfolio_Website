@@ -6,12 +6,12 @@ import { Button } from './ui/button';
 const Hero = ({ darkMode }) => {
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center"
+      className="relative flex items-center justify-center"
       style={{
         backgroundImage: "url('/assets/images/molecular_background.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '700px'
+        height: '500px'
       }}
     >
       {/* Background overlay for better text readability */}
