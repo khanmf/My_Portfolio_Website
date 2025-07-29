@@ -74,6 +74,56 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+# Contact Form Routes
+@api_router.post("/contact", response_model=ContactFormSubmission)
+async def submit_contact_form(form_data: ContactFormCreate):
+    """
+    Submit a contact form inquiry
+    """
+    try:
+        # Create the contact submission object
+        contact_submission = ContactFormSubmission(**form_data.dict())
+        
+        # Save to MongoDB
+        result = await db.contact_submissions.insert_one(contact_submission.dict())
+        
+        if result.inserted_id:
+            logger.info(f"Contact form submitted by {form_data.email} - Subject: {form_data.subject}")
+            return contact_submission
+        else:
+            raise HTTPException(status_code=500, detail="Failed to save contact form")
+            
+    except Exception as e:
+        logger.error(f"Error submitting contact form: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@api_router.get("/contact", response_model=List[ContactFormSubmission])
+async def get_contact_submissions():
+    """
+    Get all contact form submissions (for admin use)
+    """
+    try:
+        submissions = await db.contact_submissions.find().to_list(1000)
+        return [ContactFormSubmission(**submission) for submission in submissions]
+    except Exception as e:
+        logger.error(f"Error fetching contact submissions: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+@api_router.get("/contact/{submission_id}", response_model=ContactFormSubmission)
+async def get_contact_submission(submission_id: str):
+    """
+    Get a specific contact form submission by ID
+    """
+    try:
+        submission = await db.contact_submissions.find_one({"id": submission_id})
+        if submission:
+            return ContactFormSubmission(**submission)
+        else:
+            raise HTTPException(status_code=404, detail="Submission not found")
+    except Exception as e:
+        logger.error(f"Error fetching contact submission {submission_id}: {str(e)}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
 # Include the router in the main app
 app.include_router(api_router)
 
