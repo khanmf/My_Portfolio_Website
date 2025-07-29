@@ -71,20 +71,38 @@ const Hero = ({ darkMode }) => {
               <a 
                 href="mailto:faraz91khan@gmail.com" 
                 className="p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-200"
+                title="Email"
               >
                 <Mail className="h-5 w-5 text-white" />
               </a>
               <a 
-                href="#" 
+                href="https://scholar.google.com/citations?user=9JziUvkAAAAJ" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-200"
+                title="Google Scholar"
               >
-                <Linkedin className="h-5 w-5 text-white" />
+                <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M5.242 13.769L0.5 9.5 12 1l11.5 8.5-4.742 4.269C17.548 12.53 14.978 11.5 12 11.5c-2.977 0-5.548 1.03-6.758 2.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                </svg>
               </a>
               <a 
                 href="#" 
                 className="p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-200"
+                title="LinkedIn"
               >
-                <Github className="h-5 w-5 text-white" />
+                <Linkedin className="h-5 w-5 text-white" />
+              </a>
+              <a 
+                href="https://www.researchgate.net/profile/Mohemmed-Faraz-Khan" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-200"
+                title="ResearchGate"
+              >
+                <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.563.754-.563.754s.563-.377 1.126-.377c.564 0 1.127.377 1.127.377s.564-.377 1.127-.377c.564 0 1.127.19 1.69.565C22.584.944 23.147 1.13 24 1.317v21.366c0 .377-.563.754-1.127.754-.563 0-1.126-.377-1.126-.377s-.564.377-1.127.377c-.564 0-1.127-.377-1.127-.377s-.563.377-1.126.377c-.564 0-1.127-.19-1.69-.565-.565-.377-1.128-.563-1.693-.563-.564 0-1.126.186-1.69.563-.565.374-1.128.564-1.693.564H0V1.317c.853-.188 1.416-.374 1.98-.563C2.544.377 3.107.19 3.67.19c.565 0 1.128.186 1.693.563.564.374 1.127.564 1.69.564.565 0 1.128-.19 1.693-.564C9.31.376 9.875.19 10.44.19c.564 0 1.127.186 1.69.563.565.374 1.128.564 1.693.564.565 0 1.128-.19 1.693-.564.565-.374 1.128-.563 1.693-.563.565 0 1.128.19 1.693.563.564.377 1.127.564 1.69.564z"/>
+                </svg>
               </a>
             </div>
           </div>
