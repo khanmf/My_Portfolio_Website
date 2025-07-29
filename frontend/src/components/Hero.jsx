@@ -91,7 +91,7 @@ const Hero = ({ darkMode }) => {
           {/* Right Column - Professional Headshot */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <div className="w-96 h-96 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img 
                   src="/assets/images/headshot.png" 
                   alt="Dr. Mohemmed Faraz Khan - Professional Headshot"
