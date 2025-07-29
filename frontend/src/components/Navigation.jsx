@@ -9,9 +9,9 @@ const Navigation = ({ darkMode, toggleDarkMode }) => {
 
   const navItems = [
     { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
     { path: '/academic', label: 'Academic Portfolio' },
     { path: '/freelance', label: 'Freelancing & Services' },
-    { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' }
   ];
 
