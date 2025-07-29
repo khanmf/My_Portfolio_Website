@@ -41,30 +41,6 @@ const AcademicPage = ({ darkMode }) => {
     }
   ];
 
-  const education = [
-    {
-      degree: "Ph.D., Pharmaceutical Chemistry",
-      institution: "Jamia Hamdard",
-      location: "New Delhi, India",
-      year: "2020",
-      thesis: "Synthesis and biological evaluation of novel pyrazole-4-acrylic acid analogues as potential anticancer and anti-inflammatory agents"
-    },
-    {
-      degree: "M.Pharm., Pharmaceutical Chemistry", 
-      institution: "Jamia Hamdard",
-      location: "New Delhi, India",
-      year: "2015",
-      thesis: "Synthesis and in vitro antimalarial evaluation of pyrazole and 1,3,4-oxadiazole based hybrid compounds"
-    },
-    {
-      degree: "B.Pharm., Pharmacy",
-      institution: "Rajiv Gandhi Technical University",
-      location: "Bhopal, India", 
-      year: "2013",
-      thesis: "Molecular docking of novel inhibitors targeting Plasmodium falciparum Dihydrofolate Reductase"
-    }
-  ];
-
   const keyPublications = [
     {
       title: "FDA-approved Kinase Inhibitors",
@@ -92,21 +68,6 @@ const AcademicPage = ({ darkMode }) => {
     }
   ];
 
-  const skills = [
-    "Computational Chemistry",
-    "AI/ML in Drug Discovery", 
-    "CADD",
-    "Molecular Docking",
-    "QSAR Modeling",
-    "Molecular Dynamics",
-    "Virtual Screening",
-    "Python Programming",
-    "Schrödinger Suite",
-    "GROMACS",
-    "RDKit",
-    "TensorFlow"
-  ];
-
   const awards = [
     "Government of Ireland Postdoctoral Fellowship – Irish Research Council (2020)",
     "SERB-ITS Travel Grant – Kazan Chemoinformatics School, Russia (2017)",
@@ -116,10 +77,10 @@ const AcademicPage = ({ darkMode }) => {
   ];
 
   return (
-    <div className={`min-h-screen py-20 ${darkMode ? 'bg-slate-900' : 'bg-gray-50'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
+    <div className={`min-h-screen ${darkMode ? 'bg-slate-900' : 'bg-gray-50'}`}>
+      {/* Header */}
+      <div className={`py-20 ${darkMode ? 'bg-slate-800' : 'bg-white'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className={`text-5xl font-serif font-bold mb-4 ${
             darkMode ? 'text-white' : 'text-slate-800'
           }`}>
@@ -132,63 +93,134 @@ const AcademicPage = ({ darkMode }) => {
             and AI/ML applications in pharmaceutical sciences.
           </p>
         </div>
+      </div>
 
-        {/* Key Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <Card className={`p-6 text-center ${
-            darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
-          }`}>
-            <div className={`text-3xl font-bold mb-2 ${
-              darkMode ? 'text-emerald-400' : 'text-emerald-600'
-            }`}>40+</div>
-            <div className={`text-sm ${
-              darkMode ? 'text-gray-300' : 'text-gray-600'
-            }`}>Publications</div>
-          </Card>
-          <Card className={`p-6 text-center ${
-            darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
-          }`}>
-            <div className={`text-3xl font-bold mb-2 ${
-              darkMode ? 'text-emerald-400' : 'text-emerald-600'
-            }`}>2080+</div> 
-            <div className={`text-sm ${
-              darkMode ? 'text-gray-300' : 'text-gray-600'
-            }`}>Citations</div>
-          </Card>
-          <Card className={`p-6 text-center ${
-            darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
-          }`}>
-            <div className={`text-3xl font-bold mb-2 ${
-              darkMode ? 'text-emerald-400' : 'text-emerald-600'
-            }`}>18</div>
-            <div className={`text-sm ${
-              darkMode ? 'text-gray-300' : 'text-gray-600'
-            }`}>h-index</div>
-          </Card>
-          <Card className={`p-6 text-center ${
-            darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
-          }`}>
-            <div className={`text-3xl font-bold mb-2 ${
-              darkMode ? 'text-emerald-400' : 'text-emerald-600'
-            }`}>133.2</div>
-            <div className={`text-sm ${
-              darkMode ? 'text-gray-300' : 'text-gray-600'
-            }`}>Total IF</div>
-          </Card>
+      {/* Academic Portfolio Section - Following Block 3 Specifications */}
+      <section 
+        className="py-16 px-8"
+        style={{ backgroundColor: '#F8F9FA' }}
+      >
+        <div className="max-w-6xl mx-auto">
+          <h2 
+            className="text-3xl font-serif mb-6"
+            style={{ color: '#2F3E46' }}
+          >
+            📚 Academic Portfolio
+          </h2>
+          <p 
+            className="text-base mb-8"
+            style={{ color: '#2F3E46' }}
+          >
+            Explore my academic journey — from cutting-edge computational drug discovery projects to mentoring and publishing in high-impact journals.
+          </p>
+          
+          {/* Key Metrics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <Card className="p-6 text-center bg-white border-gray-200">
+              <div className="text-3xl font-bold mb-2 text-emerald-600">40+</div>
+              <div className="text-sm text-gray-600">Publications</div>
+            </Card>
+            <Card className="p-6 text-center bg-white border-gray-200">
+              <div className="text-3xl font-bold mb-2 text-emerald-600">2080+</div> 
+              <div className="text-sm text-gray-600">Citations</div>
+            </Card>
+            <Card className="p-6 text-center bg-white border-gray-200">
+              <div className="text-3xl font-bold mb-2 text-emerald-600">18</div>
+              <div className="text-sm text-gray-600">h-index</div>
+            </Card>
+            <Card className="p-6 text-center bg-white border-gray-200">
+              <div className="text-3xl font-bold mb-2 text-emerald-600">133.2</div>
+              <div className="text-sm text-gray-600">Total IF</div>
+            </Card>
+          </div>
+
+          {/* Subsections Grid */}
+          <div className="grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 
+                className="font-semibold mb-2"
+                style={{ color: '#2C6E49' }}
+              >
+                Research Experience
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <li>Postdoctoral Researcher, Maynooth University</li>
+                <li>Postdoc, Trinity College Dublin – CADD & AI integration</li>
+                <li>Assistant Professor, Integral University</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 
+                className="font-semibold mb-2"
+                style={{ color: '#2C6E49' }}
+              >
+                Teaching Experience
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <li>Medicinal Chemistry, Cheminformatics, Principles of Drug Design</li>
+                <li>Graduate/Postgraduate level instruction</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 
+                className="font-semibold mb-2"
+                style={{ color: '#2C6E49' }}
+              >
+                Publications & Citations
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <li>40+ peer-reviewed publications</li>
+                <li>h-index: 18 | Citations: 2000+</li>
+                <li>Link: <a href="https://scholar.google.com/citations?user=9JziUvkAAAAJ" className="text-blue-600 underline">Google Scholar</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 
+                className="font-semibold mb-2"
+                style={{ color: '#2C6E49' }}
+              >
+                Awards & Fellowships
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <li>Senior Research Fellowship (CSIR-UGC)</li>
+                <li>ICMR Travel Grant</li>
+                <li>Research Excellence Awards</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 
+                className="font-semibold mb-2"
+                style={{ color: '#2C6E49' }}
+              >
+                Skills & Tools
+              </h3>
+              <ul className="list-disc list-inside text-sm text-gray-700 space-y-2">
+                <li>Docking, QSAR, Pharmacophore, AI/ML</li>
+                <li>Python, Schrödinger, RDKit, OpenEye</li>
+                <li>Zotero, EndNote, LaTeX</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Research Experience */}
-        <section className="mb-16">
+      {/* Detailed Research Experience */}
+      <section className={`py-16 ${darkMode ? 'bg-slate-800' : 'bg-white'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className={`text-3xl font-serif font-bold mb-8 flex items-center ${
             darkMode ? 'text-white' : 'text-slate-800'
           }`}>
             <Microscope className="mr-3 h-8 w-8" />
-            Research Experience
+            Research Experience Details
           </h2>
           <div className="space-y-6">
             {experiences.map((exp, index) => (
               <Card key={index} className={`p-6 ${
-                darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
+                darkMode ? 'bg-slate-900 border-slate-700' : 'bg-white border-gray-200'
               }`}>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                   <div>
@@ -225,54 +257,12 @@ const AcademicPage = ({ darkMode }) => {
               </Card>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Education */}
-        <section className="mb-16">
-          <h2 className={`text-3xl font-serif font-bold mb-8 flex items-center ${
-            darkMode ? 'text-white' : 'text-slate-800'
-          }`}>
-            <BookOpen className="mr-3 h-8 w-8" />
-            Education
-          </h2>
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <Card key={index} className={`p-6 ${
-                darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
-              }`}>
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
-                  <div className="flex-1">
-                    <h3 className={`text-xl font-semibold mb-2 ${
-                      darkMode ? 'text-white' : 'text-slate-800'
-                    }`}>
-                      {edu.degree}
-                    </h3>
-                    <div className={`flex items-center text-sm mb-3 ${
-                      darkMode ? 'text-gray-300' : 'text-gray-600'
-                    }`}>
-                      <span className="font-medium">{edu.institution}</span>
-                      <MapPin className="mx-2 h-4 w-4" />
-                      <span>{edu.location}</span>
-                    </div>
-                    <p className={`text-sm italic ${
-                      darkMode ? 'text-gray-400' : 'text-gray-500'
-                    }`}>
-                      {edu.thesis}
-                    </p>
-                  </div>
-                  <Badge variant="outline" className={`mt-2 lg:mt-0 ${
-                    darkMode ? 'border-gray-600 text-gray-300' : 'border-gray-300 text-gray-600'
-                  }`}>
-                    {edu.year}
-                  </Badge>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Key Publications */}
-        <section className="mb-16">
+      {/* Key Publications */}
+      <section className={`py-16 ${darkMode ? 'bg-slate-900' : 'bg-gray-50'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className={`text-3xl font-serif font-bold mb-8 flex items-center ${
             darkMode ? 'text-white' : 'text-slate-800'
           }`}>
@@ -314,32 +304,12 @@ const AcademicPage = ({ darkMode }) => {
               <ExternalLink className="ml-2 h-4 w-4" />
             </Button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Technical Skills */}
-        <section className="mb-16">
-          <h2 className={`text-3xl font-serif font-bold mb-8 ${
-            darkMode ? 'text-white' : 'text-slate-800'
-          }`}>
-            Technical Skills
-          </h2>
-          <Card className={`p-6 ${
-            darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
-          }`}>
-            <div className="flex flex-wrap gap-3">
-              {skills.map((skill, index) => (
-                <Badge key={index} variant="secondary" className={`${
-                  darkMode ? 'bg-slate-700 text-gray-300' : 'bg-gray-100 text-gray-700'
-                }`}>
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          </Card>
-        </section>
-
-        {/* Awards & Recognition */}
-        <section>
+      {/* Awards & Recognition */}
+      <section className={`py-16 ${darkMode ? 'bg-slate-800' : 'bg-white'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className={`text-3xl font-serif font-bold mb-8 flex items-center ${
             darkMode ? 'text-white' : 'text-slate-800'
           }`}>
@@ -347,7 +317,7 @@ const AcademicPage = ({ darkMode }) => {
             Awards & Recognition
           </h2>
           <Card className={`p-6 ${
-            darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
+            darkMode ? 'bg-slate-900 border-slate-700' : 'bg-white border-gray-200'
           }`}>
             <ul className="space-y-3">
               {awards.map((award, index) => (
@@ -360,8 +330,8 @@ const AcademicPage = ({ darkMode }) => {
               ))}
             </ul>
           </Card>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
