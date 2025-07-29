@@ -23,7 +23,7 @@ const Hero = ({ darkMode }) => {
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left text-white">
             <h1 
-              className="font-serif font-bold mb-6"
+              className="font-serif font-bold mb-8"
               style={{ 
                 fontFamily: "'Playfair Display', serif", 
                 fontSize: '3.5rem', 
@@ -35,12 +35,13 @@ const Hero = ({ darkMode }) => {
             </h1>
             
             <h2 
-              className="font-sans italic mb-8"
+              className="font-sans italic mb-10"
               style={{ 
                 fontFamily: "'Inter', sans-serif", 
                 fontSize: '1.75rem', 
                 fontStyle: 'italic',
-                lineHeight: '1.3'
+                lineHeight: '1.4',
+                marginTop: '1.5rem'
               }}
             >
               From Molecules to Manuscripts — I Design, Analyze, and Deliver Scientific Solutions
